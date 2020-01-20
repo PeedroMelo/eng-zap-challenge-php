@@ -142,7 +142,6 @@ A Lib contém as seguintes tratativas:
 * [Apache/Xampp](https://www.apachefriends.org/pt_br/index.html) - Servidor para rodar o PHP
 
 ## 7. Autor
-Pedro Melo
+Pedro Melo | vieirapcm@gmail.com | (11) 97611-1799
 * [LinkedIn](https://www.linkedin.com/in/vieirapcm/)
 * [Github](https://github.com/vieirapcm)
-* [Email](vieirapcm@gmail.com)
