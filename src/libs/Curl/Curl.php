@@ -22,15 +22,6 @@
 
             curl_close($curl);
 
-            return $response;
-        }
-
-        public function getTest($options = [])
-        {
-            $url = isSet($options['url']) ? $options['url'] : '';
-
-            $response = file_get_contents($url);
-
-            return $response;
+            return json_decode($response, true);
         }
     }

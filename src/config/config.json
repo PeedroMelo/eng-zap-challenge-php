@@ -1,4 +1,12 @@
 {
     "sourceFileUrl": "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/sources/source-2.json",
-    "sourceFileUrlTest": "../examples/example.json"
+    "sourceFileUrlTest": "../examples/example.json",
+    "boundingBox": 
+        {
+            "minlon": -46.693419,
+            "maxlon": -46.641146,
+            "minlat": -23.568704,
+            "maxlat": -23.546686
+        }
+    
 }

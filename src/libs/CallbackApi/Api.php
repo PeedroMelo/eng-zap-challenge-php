@@ -2,16 +2,23 @@
 
     class Api
     {
+        public function __construct()
+        {
+            header("Content-type: application/json; charset=UTF-8");
+        }
+
         // TODO: implementar uma trava pra não permitir que o método get seja chamado mais de uma vez em uma unica execução para o mesmo endereço.
-        public function get($path = '/', $args = '', $call = '')
+        public function get($path = '/', $call = '')
         {
             if ($this->validateCurrentPath($path)) {
-
                 if (!$this->validateRequestMethod('GET')) {
-                    return '[001] Invalid request type.';
+                    $this->response(400, '[400] Invalid request type.');
+                    return false;
                 }
 
-                if ($call <> '') return $call($args);
+                $req = $_GET;
+
+                if ($call <> '') return $call($req);
             }
         }
 
@@ -25,9 +32,14 @@
         private function validateRequestMethod($requestMethod)
         {
             if ($_SERVER['REQUEST_METHOD'] <> $requestMethod) {
-                http_response_code(500);
                 return false;
             }
             return true;
+        }
+
+        public function response($response_code, $return)
+        {
+            http_response_code($response_code);
+            print_r(json_encode($return));
         }
     }
